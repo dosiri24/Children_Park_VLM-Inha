@@ -1,0 +1,22 @@
+# Secrets & environment
+.env
+.env.*
+
+# OS / editor cruft
+.DS_Store
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Prototype / pilot code, logs, and results — kept local, not published
+prototype/
+
+# Research photos — managed separately, not published
+park_photos/
+
+# Internal research docs — not published
+CLAUDE.md
+PLAN_prototype_*.md
+PILOT_RESULTS_*.md
