@@ -1,22 +1,45 @@
 # Secrets & environment
 .env
 .env.*
+!.env.example
 
 # OS / editor cruft
 .DS_Store
 
-# Python caches
+# Python caches & environments
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.venv/
+
+# Run logs — contain local absolute paths
+logs/
+*.log
 
 # Prototype / pilot code, logs, and results — kept local, not published
 prototype/
+experiment/jev_pilot/
+
+# Superseded runs (18-park and 40-park) — kept local; the 53-park run replaces them
+archive/
+
+# Exploratory lexical analysis (hypothesis 3, not yet finalized) — kept local
+experiment/lexical/
 
 # Research photos — managed separately, not published
 park_photos/
+photos_all/
+photos_raw/
 
 # Internal research docs — not published
 CLAUDE.md
-PLAN_prototype_*.md
+PLAN_*.md
 PILOT_RESULTS_*.md
+연구설계_확정안_*.md
+claudedocs/
+
+# Result write-ups — not published
+RESULTS_*.md
+experiment/analysis/results/quant_results.md
+experiment/analysis/results/qual_cases.md
+experiment/analysis/results/qual_cases_input.md

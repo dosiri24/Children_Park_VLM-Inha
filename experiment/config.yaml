@@ -1,0 +1,54 @@
+model_id: gemini-3.8-flash
+thinking_level: low
+# Gemini 3 docs recommend keeping the default 1.0; set explicitly for the record.
+temperature: 1.0
+request_timeout_seconds: 120
+# Each park cache is deleted after its calls; TTL only bounds storage if a run is killed.
+cache_ttl_seconds: 1800
+prompt_dir: prompts
+photo_dir: ../photos_all
+directions: [N, E, S, W]
+results_dir: results
+log_dir: logs
+image:
+  resolution: ultra_high
+  max_side: 2048
+  jpeg_quality: 95
+repeats: 5
+parallel_parks: 6
+
+personas:
+  - id: none
+    persona_type: none
+    child_age_group: null
+    child_gender: null
+  - id: child_6_male
+    persona_type: child
+    child_age_group: "6"
+    child_gender: male
+  - id: child_6_female
+    persona_type: child
+    child_age_group: "6"
+    child_gender: female
+  - id: child_9_male
+    persona_type: child
+    child_age_group: "9"
+    child_gender: male
+  - id: child_9_female
+    persona_type: child
+    child_age_group: "9"
+    child_gender: female
+  - id: child_12_male
+    persona_type: child
+    child_age_group: "12"
+    child_gender: male
+  - id: child_12_female
+    persona_type: child
+    child_age_group: "12"
+    child_gender: female
+
+# Standard paid tier through 2026-12-31 (doubles from 2027-01-01).
+pricing_usd_per_million_tokens:
+  input: 0.75
+  cached_input: 0.075
+  output: 3.75
